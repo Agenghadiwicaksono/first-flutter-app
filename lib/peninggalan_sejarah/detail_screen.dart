@@ -56,12 +56,12 @@ class DetailMobileScreen extends StatelessWidget {
                 child: Container(
                   height: 50,
                   width: 50,
-                  padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(2),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.white
                   ),
-                  child: Icon(Icons.arrow_back,),
+                  child: const Icon(Icons.arrow_back,),
                 ),
               ),
             ),
@@ -71,7 +71,7 @@ class DetailMobileScreen extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(vertical: 30),
           child:  Text(place.name,
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+          style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
         ),
         Container(
           child: Row(
@@ -79,18 +79,18 @@ class DetailMobileScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Icon(Icons.location_on),
+                  const Icon(Icons.location_on),
                   Text(place.location)
                 ],
               ),
               Column(
                 children: [
-                  Icon(Icons.access_time),
+                  const Icon(Icons.access_time),
                   Text(place.years)
                 ],),
               Column(
                 children: [
-                  Icon(Icons.person_pin),
+                  const Icon(Icons.person_pin),
                   Text(place.founder)
                 ],)
             ],
@@ -143,6 +143,7 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -159,13 +160,13 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                  Container(
+                  SizedBox(
                     width: 50,
                     height: 50,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(200)),
+                        borderRadius: const BorderRadius.all(Radius.circular(200)),
                         child: Image.asset(
                           widget.place.imageNation,
                           fit: BoxFit.cover,
@@ -177,7 +178,7 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                   ),
                   Text(
                     widget.place.nameAcount,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold
                     ),
@@ -185,7 +186,7 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                   ] 
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -198,7 +199,7 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                             widget.place.imageAsset,
                           ),
                         ),
-                        SizedBox(height: 16,),
+                        const SizedBox(height: 16,),
                         Scrollbar(
                           controller: _scrollbarController,
                           child: SizedBox(
@@ -222,18 +223,18 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                       ],
                     )
                   ),
-                  SizedBox(width: 16,),
+                  const SizedBox(width: 16,),
                   Expanded(
                     child: Card(
                       child: Container(
-                        padding: EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               widget.place.name,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.w600
                               ),
@@ -243,8 +244,8 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                               children: [
                                 Row(
                                   children: [
-                                    Icon(Icons.location_on),
-                                    SizedBox(width: 8,),
+                                    const Icon(Icons.location_on),
+                                    const SizedBox(width: 8,),
                                     Text(widget.place.location)
                                   ],
                                 ),
@@ -256,33 +257,33 @@ class _DetailWebScreenState extends State<DetailWebScreen> {
                                 ),)
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Row(
                               children: [
-                                Icon(Icons.access_time),
-                                SizedBox(width: 8,),
+                                const Icon(Icons.access_time),
+                                const SizedBox(width: 8,),
                                 Text(widget.place.years)
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Row(
                               children: [
-                                Icon(Icons.person_pin),
-                                SizedBox(width: 8,),
+                                const Icon(Icons.person_pin),
+                                const SizedBox(width: 8,),
                                 Text(widget.place.founder)
                               ],
                             ),
                             Container(
                               child: Padding(
-                                padding: EdgeInsets.all(16),
+                                padding: const EdgeInsets.all(16),
                                 child: Text(
                                   widget.place.description,
                                   textAlign: TextAlign.justify,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 16,
                                   ),
                                 ),
